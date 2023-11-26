@@ -1,0 +1,38 @@
+[project]
+name = "weatherforecast" # パッケージ名を設定
+version = "0.0.1"        # PEP 440で指定された公式のバージョン表記で設定
+dependencies = [         # 必要な依存関係のパッケージを設定
+    "numpy==1.26.0",
+    "requests==2.31.0",
+]
+description = "sample packages by pure-toml" # パッケージの簡単な説明を記載
+# 以下の情報（作成者、連絡先など）の入力は任意です（入力するのが望ましいです）。
+# authors = [
+#     { name="Example Author", email="author@example.com" },
+# ]
+# readme = "README.md"
+
+
+
+# パッケージ名を指定して実行された時の動作を指定
+[project.scripts]
+weatherforecast = "weatherforecast:main"
+
+
+
+# その他の追加設定が必要な場合
+# [tool.setuptools]
+# 
+# srcレイアウトを用いる場合は、パッケージの位置を明示的に指定
+# package-dir = {"" = "src"}
+# 
+# 対象パッケージのフォルダー以外のフォルダーが直下にある場合は、
+# 明示的に対象パッケージのフォルダー名を指定
+# packages = ["weatherforecast"]
+
+
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
